@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha Malina</title>
+    <script src="assets/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preload" href="/Fotos/26-10-24.jpeg">
+    <style>
+
+    </style>
+</head>
+
+<body class="fundo" onclick="musicaOn()">
+    <audio id="player" autoplay="autoplay" controls="controls" loop="loop">
+        <source src="./assets/trilhasonora.mp3" type="audio/mp3" />
+    </audio>
+    <div class="conteudo1">
+        <div>
+            <button style="float: right;" onclick="mudarConteudo()"><img class="icoRight"
+                    src="./Fotos/icoRight.png" alt=""></button>
+        </div>
+        <div id="animacao" class="conteiner">
+            <div>
+                <h1 style="margin-top: 5%;">Hoje falaremos da mulher mais linda da desse Mundo!</h1>
+                <h5>Quem será que é?</h5>
+                <button type="button" class="btn btn-danger" onclick="mostrarConteudo()">Descubra!</button>
+                <br>
+                <div>
+                    <img id="fotoGata" style="display: none;" src="./Fotos/14-12-24.jpeg" alt=""
+                        class="fotoMaria" onmouseover="naoToque()">
+                    <small id="texto" style="display: none; margin-top: 5%;">
+                        <h5>A mulher mais linda desse mundo, tanto por dentro quanto por fora é essa que faz eu me
+                            apaixonar todos os dias cada vez mais. <br>É a mais perfeita de todas pra mim e nem em sonho imaginaria ter alguém assim na vida.</h5>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteudo2">
+        <div class="conteinerCalendario">
+            <h1 style="margin-top: 5%;">Bem vinda ao nosso calendário</h1>
+            <h5>Clique no dia marcado que quiser!</h5>
+            <hr>
+            <table class="calendario">
+                <span><strong class="text-muted">Outubro de 2024</strong></span>
+                <thead>
+                    <tr>
+                        <td>Dom</td>
+                        <td>Seg</td>
+                        <td>Ter</td>
+                        <td>Qua</td>
+                        <td>Qui</td>
+                        <td>Sex</td>
+                        <td>Sáb</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td class="marcado" onclick="mudarFoto1()">26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <table class="calendario">
+                <span><strong class="text-muted">Novembro de 2024</strong></span>
+                <thead>
+                    <tr>
+                        <td>Dom</td>
+                        <td>Seg</td>
+                        <td>Ter</td>
+                        <td>Qua</td>
+                        <td>Qui</td>
+                        <td>Sex</td>
+                        <td>Sáb</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td class="marcado" onclick="mudarFoto2()">20</td>
+                        <td>21</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                    </tr>
+
+                    <tr>
+                        <td>30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+
+                    <table class="calendario">
+                        <hr>
+                        <span><strong class="text-muted">Dezembro de 2024</strong></span>
+                        <thead>
+                            <tr>
+                                <td>Dom</td>
+                                <td>Seg</td>
+                                <td>Ter</td>
+                                <td>Qua</td>
+                                <td>Qui</td>
+                                <td>Sex</td>
+                                <td>Sáb</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td></td>
+                            <td class="marcado" onclick="mudarFoto3()">1</td>
+                            <td class="marcado" onclick="mudarFoto4()">2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td class="marcado" onclick="mudarFoto5()">14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>3</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <table class="calendario">
+                            <hr>
+                            <span><strong class="text-muted">Janeiro de 2025</strong></span>
+                            <thead>
+                                <tr>
+                                    <td>Dom</td>
+                                    <td>Seg</td>
+                                    <td>Ter</td>
+                                    <td>Qua</td>
+                                    <td>Qui</td>
+                                    <td>Sex</td>
+                                    <td>Sáb</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>3</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                                <td class="marcado" onclick="mudarFoto6()">28</td>
+                                <td>29</td>
+                                <td>30</td>
+                            </tr>
+
+
+                            <table class="calendario">
+                                <hr>
+                                <span><strong class="text-muted">Fevereiro de 2025
+</strong></span>
+                                <thead>
+                                    <tr>
+                                        <td>Dom</td>
+                                        <td>Seg</td>
+                                        <td>Ter</td>
+                                        <td>Qua</td>
+                                        <td>Qui</td>
+                                        <td>Sex</td>
+                                        <td>Sáb</td>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td class="marcado" onclick="mudarFoto7()">8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td class="marcado" onclick="mudarFotoFinal()">12</td>
+                                </tr>
+                                
+
+
+                </tbody>
+                
+            </table>
+            
+        </div>
+    </div>
+    <div class="conteudo3">
+        <div>
+            <button onclick="mudarFoto1()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo3">
+            <h1 style="margin-top: 10%;">Dia 26 de Outubro</h1>
+            <h5>Primeira foto que tirei sua</h5>
+            <img style="width: 400px; height: 640px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                class="imagem1" src="./Fotos/26-10-24.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>
+                    Lembro como se fosse ontem de você colocando minha blusa correndo pra buscar nosso lanche, nesse dia eu não fazia ideia do quão importante você se tornaria pra mim</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo4">
+        <div>
+            <button onclick="mudarFoto2()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo4">
+            <h1 style="margin-top: 10%;">Dia 20 de Novembro</h1>
+            <h5>Primeiro foto recebida</h5>
+            <img class="imagem2-15-abril" src="./Fotos/20-11-24.jpeg" alt="">
+            <small style="margin-top: 5%;"> <br>
+                <h5>Essa é a primeira foto sua sem ser de visualização unica que lembro de ter me mandado, ali eu já tinha certeza que tava me apaixonando mas ainda estava em negação 👉🏽👈🏽
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo5">
+        <div>
+            <button onclick="mudarFoto3()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo5">
+            <h1 style="margin-top: 10%;">Dia 01 de Dezembro</h1>
+            <h5>Fofinea</h5>
+            <img style="width: 400px; height: 600px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/01-12-24.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Uma fotinha fofinha da muié que sempre que manda me deixa com o ❤️ derretido que nem manteiga quente.</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo6">
+        <div>
+            <button onclick="mudarFoto4()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo6">
+            <h1 style="margin-top: 10%;">Dia 02 de Dezembro</h1>
+            <h5>Sorrisão</h5>
+            <img style="width: 400px; height: 600px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/02-12-24.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Provas de que mulher tem o sorriso mais lindo de todo mundoooo!!!</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo7">
+        <div>
+            <button onclick="mudarFoto5()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo7">
+            <h1 style="margin-top: 10%;">Dia 14 de Dezembro</h1>
+            <h5>Muié Bebinha</h5>
+            <img style="width: 400px; height: 590px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/14-12-24.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Esse dia eu tive que me controlar muitoooooo pq a muié estava estremamente safada e bebinha bebinha, mas estremamente fofa ao mesmo tempo ❤️
+                    <br>
+                </h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo8">
+        <div>
+            <button onclick="mudarFoto6()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo8">
+            <h1 style="margin-top: 10%;">Dia 28 de Janeiro</h1>
+            <h5>Contagem regressiva</h5>
+            <img style="width: 480px; height: 650px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/28-01-25.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>Aqui a gente já tava na contagem mega regressiva, com todos os planos dando certo!!!</h5>
+            </small>
+        </div>
+    </div>
+
+    <div class="conteudo9">
+        <div>
+            <button onclick="mudarFoto8()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner-conteudo9">
+            <h1 style="margin-top: 10%;">Dia 08 de Fevereiro</h1>
+            <h5>Grande Diaaaa</h5>
+            <img style="width: 400px; height: 670px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/08-02-25.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>E finalmente chegou o grande dia, eu estava mega ansiosa e nervoda em finalmente rever minha mulher e não ter que despedir depois, a ficha ainda não tava caindo... 
+                </h5>
+            </small>
+            <img style="width: 450px; height: 600px; border-radius: 20px; margin-top: 2%; margin-bottom: 2%;"
+                src="./Fotos/grande_dia.jpeg" alt="">
+            <small style="margin-top: 5%;">
+                <h5>E FINALMENTE COM A MUIEEEEE! O momento mais esperado de 2024 e 2025 pra mim 🩵🩵🩵</h5>
+            </small>
+
+        </div>
+    </div>
+
+
+    <div class="conteudo16">
+        <div>
+            <button onclick="mudarFotoFinal()"><img class="icoRight" src="./Fotos/icoLeft.jpeg" alt=""></button>
+        </div>
+        <div class="conteiner">
+            <h1 style="margin-top: 10%;">Dia 12 de Fevereiro</h1>
+            <h5></h5>
+            <div style="margin-top: 15%; margin-bottom: 20%;">
+                <small>
+                    <p></p>
+                </small>
+            </div>
+            <small style="margin-top: 5%;">
+                <h5>Para saber o que acontece nesse dia...</h5>
+            </small>
+            <a href="./pedidoNamoro/pedido.html"><button type="button" class="btn btn-danger">Clique
+                    aqui!</button></a>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
